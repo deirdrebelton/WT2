@@ -1,3 +1,4 @@
-# Get Started!
+Welcome to the Playlist 6
+=========================
 
-Add files and start typing 🎉
+Version 6 of the Playlist application
