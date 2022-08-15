@@ -47,6 +47,7 @@ const accounts = {
       logger.info(`logging in ${user.email}`);
       response.redirect("/dashboard");
     } else {
+      logger.info("Authentication failed");
       response.redirect("/login");
     }
   },
