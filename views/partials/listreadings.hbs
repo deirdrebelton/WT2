@@ -1,6 +1,7 @@
 <table class="ui table">
   <thead>
     <tr>
+      <th>Date Time</th>
       <th>Code</th>
       <th>Temperature (degC)</th>
       <th>Wind Speed (km/h)</th>
@@ -13,6 +14,9 @@
   <tbody>
     {{#each station.readings}}
       <tr>
+        <td>
+          {{date}}
+        </td>
         <td>
           {{code}}
         </td>
@@ -27,11 +31,6 @@
         </td>
         <td>
           {{pressure}}
-        </td>
-        <td>
-          <a href="/reading/{{../station.id}}/editreading/{{id}}" class="ui icon button">
-            <i class="pencil alternate icon"></i>
-          </a>
         </td>
         <td>
           <a href="/station/{{../station.id}}/deletereading/{{id}}" class="ui icon button">

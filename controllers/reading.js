@@ -14,20 +14,6 @@ const reading = {
       reading: stationStore.getReading(stationId, readingId)
     };
     response.render("reading", viewData);
-  },
-
-  update(request, response) {
-    const stationId = request.params.id;
-    const readingId = request.params.readingid;
-    const reading = stationStore.getReading(stationId, readingId)
-    const newReading = {
-      title: request.body.title,
-      artist: request.body.artist,
-      duration: Number(request.body.duration)
-    };
-    logger.debug(`Updating Reading ${readingId} from Station ${stationId}`);
-    stationStore.updateReading(reading, newreading);
-    response.redirect("/station/" + stationId);
   }
 };
 

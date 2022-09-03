@@ -24,6 +24,8 @@ const station = {
     const maxPressure = stationAnalytics.getMaxPressure(station);
     const minWindSpeed = stationAnalytics.getMinWindSpeed(station);
     const maxWindSpeed = stationAnalytics.getMaxWindSpeed(station);
+    const tempTrend = stationAnalytics.getTempTrend(station);
+    const date = new Date();
     
     console.log(lastReading);
     const viewData = {
@@ -40,7 +42,9 @@ const station = {
       minPressure: minPressure,
       maxPressure: maxPressure,
       minWindSpeed: minWindSpeed,
-      maxWindSpeed: maxWindSpeed
+      maxWindSpeed: maxWindSpeed,
+      tempTrend: tempTrend,
+      date:date
     };
     response.render("station", viewData);
   },
@@ -57,6 +61,7 @@ const station = {
     const stationId = request.params.id;
     const station = stationStore.getStation(stationId);
     const newReading = {
+      date: Date(),
       id: uuid.v1(),
       code: Number(request.body.code),
       temperature: Number(request.body.temperature),
@@ -66,6 +71,7 @@ const station = {
     };
     logger.debug("New Reading = ", newReading);
     stationStore.addReading(stationId, newReading);
+  
     response.redirect("/station/" + stationId);
   }
 };

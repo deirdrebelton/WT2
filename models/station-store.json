@@ -8,6 +8,7 @@
       "longitude": -7.152,
       "readings": [
         {
+          "date": "Sat Sep 03 2022 17:19:27",
           "id": "01",
           "code": 800,
           "temperature": 0.5,
@@ -16,6 +17,7 @@
           "pressure": 1001
         },
         {
+          "date": "Sat Sep 03 2022 17:19:27",
           "id": "02",
           "code": 700,
           "temperature": 8,
@@ -24,6 +26,7 @@
           "pressure": 1000
         },
         {
+          "date": "Sat Sep 03 2022 17:19:27",
           "id": "03",
           "code": 200,
           "temperature": 0.5,
@@ -32,6 +35,7 @@
           "pressure": 999
         },
         {
+          "date": "Sat Sep 03 2022 17:19:27",
           "id": "6f4175e0-2b5c-11ed-9a06-83e34f4df138",
           "code": 300,
           "temperature": 3,
@@ -40,12 +44,31 @@
           "pressure": 1000
         },
         {
+          "date": "Sat Sep 03 2022 17:19:27",
           "id": "b9945260-2b8a-11ed-b045-6576694bfe9c",
           "code": 800,
           "temperature": 25,
           "windSpeed": 24,
           "windDirection": 70,
           "pressure": 1005
+        },
+        {
+          "date": "Sat Sep 03 2022 17:20:24 GMT+0000 (Coordinated Universal Time)",
+          "id": "b27ae080-2bac-11ed-9e76-3d2d2f3a4e3f",
+          "code": 500,
+          "temperature": 50,
+          "windSpeed": 50,
+          "windDirection": 50,
+          "pressure": 50
+        },
+        {
+          "date": "Sat Sep 03 2022 17:23:43 GMT+0000 (Coordinated Universal Time)",
+          "id": "2902cf60-2bad-11ed-a139-2b67b888e08c",
+          "code": 200,
+          "temperature": 20,
+          "windSpeed": 20,
+          "windDirection": 20,
+          "pressure": 2
         }
       ]
     },

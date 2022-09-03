@@ -207,7 +207,73 @@ const stationAnalytics = {
     }
     return maxWindSpeed;
   },
+    
+  getTempTrend(station) {
+    let tempTrend = 0;
+    for (let i = 0; i < station.readings.length; i++) {
+    let reading = station.readings[i];
+    if ((reading.temperature[2] > reading.temperature[1] ) && (reading.temperature[1] > reading.temperature[0])) {
+        tempTrend = 1;
+      } else if ((reading.temperature[2] < reading.temperature[1] ) && (reading.temperature[1] < reading.temperature[0])) {
+        tempTrend = -1;
+      } 
+  }
+    return tempTrend;
+  }
   
+/*  
+  getTempTrend(station) {
+    let tempTrend = 0;
+    for (let i = 0; i < station.readings.length; i++) {
+    let reading = station.readings[i];
+    if ((reading.temperature[2] > reading.temperature[1] ) && (reading.temperature[1] > reading.temperature[0])) {
+        tempTrend = 1;
+      } else if ((reading.temperature[2] < reading.temperature[1] ) && (reading.temperature[1] < reading.temperature[0])) {
+        tempTrend = -1;
+      } 
+  }
+    return tempTrend;
+  }
+  
+  public static int tempTrend(List<Reading> readings) {
+    int trend = 0;
+    if (readings.size() > 2) {
+      double values[] = {readings.get(readings.size()-3).temperature, readings.get(readings.size()-2).temperature, readings.get(readings.size()-1).temperature};
+      trend = calcTrend(values);
+    }
+    return trend;
+  }
+
+  public static int windTrend(List<Reading> readings) {
+    int trend = 0;
+    if (readings.size() > 2) {
+      double values[] = {readings.get(readings.size()-3).windSpeed, readings.get(readings.size()-2).windSpeed, readings.get(readings.size()-1).windSpeed};
+      trend = calcTrend(values);
+    }
+    return trend;
+  }
+
+  public static int pressureTrend(List<Reading> readings) {
+    int trend = 0;
+    if (readings.size() > 2) {
+      double values[] = {readings.get(readings.size()-3).pressure, readings.get(readings.size()-2).pressure, readings.get(readings.size()-1).pressure};
+      trend = calcTrend(values);
+    }
+    return trend;
+  }
+
+  public static int calcTrend(double values[]) {
+    int trend = 0;
+    if (values.length > 2) {
+      if (( values[2] > values[1] ) && (values[1] > values[0])) {
+        trend = 1;
+      } else if (( values[2] < values[1] ) && (values[1] < values[0])) {
+        trend = -1;
+      }
+    }
+    return trend;
+  }
+  */
   
 };
 
