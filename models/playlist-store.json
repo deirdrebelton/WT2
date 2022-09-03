@@ -44,6 +44,14 @@
           "windSpeed": 24,
           "windDirection": 70,
           "pressure": 1005
+        },
+        {
+          "id": "0b63a950-2b8c-11ed-9877-55a93ca3ff17",
+          "code": 600,
+          "temperature": 6,
+          "windSpeed": 2,
+          "windDirection": 200,
+          "pressure": 1004
         }
       ]
     }

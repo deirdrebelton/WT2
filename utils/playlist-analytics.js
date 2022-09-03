@@ -100,7 +100,7 @@ const playlistAnalytics = {
     let windChill = 0;
     for (let i = 0; i < playlist.readings.length; i++) {
       let reading = playlist.readings[i];
-      windChill = Math.round((13.12 + (0.6215 * reading.temperature) - (11.37 * (Math.pow(reading.windSpeed, 0.16))) + (0.3965 * reading.temperature * (Math.pow(reading.windSpeed, 0.16)))));
+      windChill = (13.12 + (0.6215 * reading.temperature) - (11.37 * (Math.pow(reading.windSpeed, 0.16))) + (0.3965 * reading.temperature * (Math.pow(reading.windSpeed, 0.16)))).toFixed(1);
     }
     return windChill;
   },
