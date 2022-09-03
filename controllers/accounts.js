@@ -55,7 +55,18 @@ const accounts = {
   getCurrentUser(request) {
     const userEmail = request.cookies.station;
     return userstore.getUserByEmail(userEmail);
+  },
+  
+  edituser(request, response) {
+    const user = userstore.getUserByEmail(request.body.email);
+    const password = userstore.getUserByPassword(request.body.password);
+    //const firstName = userstore.getUserByfirstName(request.body.firstName);
+   // const lastName = userstore.getUserBylastName(request.body.lastName);
+ 
+    userstore.addUser(user);
+  //  response.render("register");
   }
+  
 };
 
 module.exports = accounts;

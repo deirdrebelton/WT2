@@ -77,21 +77,31 @@
                         Min {{minPressure.pressure}} hPa
                         <div class="item" style="background-color: black; color: white;">
                             Max {{maxPressure.pressure}} hPa
+                           
+                            #{if {{pressureTrend}}  == 1}
+                            <i class="right floated big arrow up red icon"></i>
+                            #{/if}
+                            #{elseif {{pressureTrend}} == -1}
+                            <i class="right floated big arrow down red icon"></i>
+                            #{/elseif}
+                          
+                           </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
       </div>
-  </div>
+  
 
   
 <section class="ui center aligned middle aligned segment">
   <h2 class="ui header">
     {{station.title}}
   </h2>
- <h4> Temp Trend {{tempTrend}}
-  </h4> 
+ <h4> P Trend {{pressureTrend}} </h4> 
+  <h4> T Trend {{temperatureTrend}} </h4>
+  <h4> W Trend {{windTrend}} </h4>
   
   {{> listreadings}}
   {{> addreading}}

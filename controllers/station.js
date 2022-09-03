@@ -24,7 +24,9 @@ const station = {
     const maxPressure = stationAnalytics.getMaxPressure(station);
     const minWindSpeed = stationAnalytics.getMinWindSpeed(station);
     const maxWindSpeed = stationAnalytics.getMaxWindSpeed(station);
-    const tempTrend = stationAnalytics.getTempTrend(station);
+    const pressureTrend = stationAnalytics.getPressureTrend(station);
+    const temperatureTrend = stationAnalytics.getTemperatureTrend(station);
+    const windTrend = stationAnalytics.getWindTrend(station);
     const date = new Date();
     
     console.log(lastReading);
@@ -43,7 +45,9 @@ const station = {
       maxPressure: maxPressure,
       minWindSpeed: minWindSpeed,
       maxWindSpeed: maxWindSpeed,
-      tempTrend: tempTrend,
+      pressureTrend: pressureTrend,
+      temperatureTrend: temperatureTrend,
+      windTrend: windTrend,
       date:date
     };
     response.render("station", viewData);

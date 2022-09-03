@@ -14,32 +14,32 @@
           "temperature": 0.5,
           "windSpeed": 0.5,
           "windDirection": 220,
-          "pressure": 1001
+          "pressure": 1008
         },
         {
           "date": "Sat Sep 03 2022 17:19:27",
           "id": "02",
           "code": 700,
           "temperature": 8,
-          "windSpeed": 1,
+          "windSpeed": 1.5,
           "windDirection": 90,
-          "pressure": 1000
+          "pressure": 1005
         },
         {
           "date": "Sat Sep 03 2022 17:19:27",
           "id": "03",
           "code": 200,
-          "temperature": 0.5,
+          "temperature": 6.5,
           "windSpeed": 3.5,
           "windDirection": 120,
-          "pressure": 999
+          "pressure": 1002
         },
         {
           "date": "Sat Sep 03 2022 17:19:27",
           "id": "6f4175e0-2b5c-11ed-9a06-83e34f4df138",
           "code": 300,
           "temperature": 3,
-          "windSpeed": 55,
+          "windSpeed": 35,
           "windDirection": 55,
           "pressure": 1000
         },
@@ -48,9 +48,9 @@
           "id": "b9945260-2b8a-11ed-b045-6576694bfe9c",
           "code": 800,
           "temperature": 25,
-          "windSpeed": 24,
+          "windSpeed": 40,
           "windDirection": 70,
-          "pressure": 1005
+          "pressure": 998
         }
       ]
     },
@@ -65,19 +65,19 @@
           "date": "Sat Sep 03 2022 17:19:27",
           "id": "04",
           "code": 700,
-          "temperature": 8.0,
-          "windSpeed": 1.0,
+          "temperature": 8,
+          "windSpeed": 1,
           "windDirection": 250,
-          "pressure": 1005
+          "pressure": 999
         },
         {
           "date": "Sat Sep 03 2022 17:19:27",
           "id": "05",
           "code": 200,
           "temperature": 0.5,
-          "windSpeed": 1,
+          "windSpeed": 6,
           "windDirection": 90,
-          "pressure": 999
+          "pressure": 1002
         },
         {
           "date": "Sat Sep 03 2022 17:19:27",
@@ -86,7 +86,16 @@
           "temperature": 8,
           "windSpeed": 10.5,
           "windDirection": 125,
-          "pressure": 1002
+          "pressure": 1005
+        },
+        {
+          "date": "Sat Sep 03 2022 20:54:24 GMT+0000 (Coordinated Universal Time)",
+          "id": "97a78600-2bca-11ed-a90f-b1f209d7ce31",
+          "code": 200,
+          "temperature": 10,
+          "windSpeed": 12,
+          "windDirection": 100,
+          "pressure": 1008
         }
       ]
     },
