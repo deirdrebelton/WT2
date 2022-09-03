@@ -105,6 +105,31 @@ const playlistAnalytics = {
     return windChill;
   },
   
+   getWeatherCondition(playlist) {
+    let weatherCondition = null;
+    for (let i = 0; i < playlist.readings.length; i++) {
+    let reading = playlist.readings[i];
+    if (reading.code === 100) {
+      weatherCondition = "Clear";
+    } else if (reading.code === 200) {
+      weatherCondition = "Partial Clouds";
+    } else if (reading.code === 300) {
+      weatherCondition = "Cloudy";
+    } else if (reading.code === 400) {
+      weatherCondition = "Light Showers";
+    } else if (reading.code === 500) {
+      weatherCondition = "Heavy Shower";
+    } else if (reading.code === 600) {
+      weatherCondition = "Rain";
+    } else if (reading.code === 700) {
+      weatherCondition = "Snow";
+    } else if (reading.code === 800) {
+      weatherCondition = "Thunder";
+    } 
+    }
+    return weatherCondition;
+  },
+  
   getMinTemp(playlist) {
     let minTemp = 0;
     if (playlist.readings.length > 0) {
@@ -119,65 +144,6 @@ const playlistAnalytics = {
   }
   
   
-
-  /*
-  getShortestSong(playlist) {
-    let shortestSong = null;
-    if (playlist.readings.length > 0) {
-      shortestSong = playlist.readings[0];
-      for (let i = 1; i < playlist.readings.length; i++) {
-        if (playlist.readings[i].temperature < shortestSong.temperature) {
-          shortestSong = playlist.readings[i];
-        }
-      }
-    }
-    return shortestSong;
-  },
-  
-  getPlaylistDuration(playlist) {
-    let playlistDuration = 0;
-    for (let i = 0; i < playlist.readings.length; i++) {
-      let reading = playlist.readings[i];
-      playlistDuration = playlistDuration + reading.temperature;
-    }
-    return playlistDuration;
-  }
-
-getWindBft(playlist) {
-    let bft = 0;
-    if (playlist.readings.windSpeed == 0) {
-      bft = 0;
-    } else if (playlist.readings.windSpeed >= 1 && playlist.readings.windSpeed <= 6) {
-      bft = 1;
-    } else if (playlist.readings.windSpeed >= 7 && playlist.readings.windSpeed <= 11) {
-      bft = 2;
-    } else if (playlist.readings.windSpeed >= 12 && playlist.readings.windSpeed <= 19) {
-      bft = 3;
-    } else if (playlist.readings.windSpeed >= 20 && playlist.readings.windSpeedd <= 29) {
-      bft = 4;
-    } else if (playlist.readings.windSpeed >= 30 && playlist.readings.windSpeed <= 39) {
-      bft = 5;
-    } else if (playlist.readings.windSpeed >= 40 && playlist.readings.windSpeed <= 50) {
-      bft = 6;
-    } else if (playlist.readings.windSpeed >= 51 && playlist.readings.windSpeed <= 62) {
-      bft = 7;
-    } else if (playlist.readings.windSpeed >= 63 && playlist.readings.windSpeed <= 75) {
-      bft = 8;
-    } else if (playlist.readings.windSpeed >= 76 && playlist.readings.windSpeed <= 87) {
-      bft = 9;
-    } else if (playlist.readings.windSpeed >= 88 && playlist.readings.windSpeed <= 102) {
-      bft = 10;
-    } else if (playlist.readings.windSpeed >= 103 && playlist.readings.windSpeed<= 117) {
-      bft = 11;
-    } else if (playlist.readings.windSpeed >= 117) {
-      bft = 12;
-    } else {
-      bft = 50;
-    }
-    return bft;
-  },
-
- */
 };
 
 

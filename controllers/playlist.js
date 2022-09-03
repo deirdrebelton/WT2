@@ -18,6 +18,8 @@ const playlist = {
     const compassDirection = playlistAnalytics.getCompassDirection(playlist);
     const windChill = playlistAnalytics.getWindChill(playlist);
     const minTemp = playlistAnalytics.getMinTemp(playlist);
+    const weatherCondition = playlistAnalytics.getWeatherCondition(playlist);
+    
     
     console.log(lastReading);
     const viewData = {
@@ -28,7 +30,8 @@ const playlist = {
       bft: bft,
       compassDirection: compassDirection,
       windChill : windChill,
-      minTemp: minTemp
+      minTemp: minTemp,
+      weatherCondition : weatherCondition
     };
     response.render("playlist", viewData);
   },

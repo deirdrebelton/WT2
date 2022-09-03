@@ -15,7 +15,7 @@
                     Weather <i class="big icon cloud sun orange"></i>
                 </div>
                 <div class="item" style="background-color: black; color: white;">
-          
+                {{weatherCondition}}
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                     Temperature <i class="big icon temperature low blue"></i>
                 </div>
                 <div class="item" style="background-color: black; color: white;">
-                      {{playlist.readings.temperature}} degF
+                      {{convertDegCtoF}} degF
                     <div class="item" style="background-color: black; color: white;">
                         {{lastReading.temperature}} degC
                         <div class="item" style="background-color: black; color: white;">
@@ -44,11 +44,11 @@
                     Wind <i class="big icon wind green"></i>
                 </div>
                 <div class="item" style="background-color: black; color: white;">
-                     bft
+                     bft {{bft}}
                     <div class="item" style="background-color: black; color: white;">
-                        direction
+                        direction {{compassDirection}}
                         <div class="item" style="background-color: black; color: white;">
-                            Feels like
+                            Feels like {{windChill}}
                             <div class="item" style="background-color: black; color: white;">
                                 Min
                                 <div class="item" style="background-color: black; color: white;">
@@ -86,12 +86,14 @@
   </h2>
   <h4> Convert D to F : {{convertDegCtoF}}</h4>
   <h4> Latest Code Reading: {{lastReading.code}}</h4>
+  <h4> Latest Code Meaning: {{weatherCondition}}</h4>
   <h4> Latest Temperature Reading: {{lastReading.temperature}}</h4>
   <h4> Latest pressure Reading: {{lastReading.pressure}}</h4>
   <h4> compassDirection {{compassDirection}}</h4>
   <h4> wind in Bft: {{bft}}</h4>
   <h4> wind chill: {{windChill}}</h4>
   <h4> min Temp: {{minTemp}}</h4>
+  
   
   {{> listsongs}}
   {{> addsong}}

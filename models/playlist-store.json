@@ -16,7 +16,7 @@
         {
           "id": "02",
           "code": 700,
-          "temperature": 8.0,
+          "temperature": 8,
           "windSpeed": 1,
           "windDirection": 90,
           "pressure": 1000
@@ -32,10 +32,18 @@
         {
           "id": "6f4175e0-2b5c-11ed-9a06-83e34f4df138",
           "code": 300,
-          "temperature": 3.0,
+          "temperature": 3,
           "windSpeed": 55,
           "windDirection": 55,
           "pressure": 1000
+        },
+        {
+          "id": "b9945260-2b8a-11ed-b045-6576694bfe9c",
+          "code": 800,
+          "temperature": 25,
+          "windSpeed": 24,
+          "windDirection": 70,
+          "pressure": 1005
         }
       ]
     }
