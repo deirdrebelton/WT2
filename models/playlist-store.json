@@ -4,6 +4,8 @@
       "id": "8b301260-d267-11eb-a8f7-591ae1064ded",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "title": "Tramore",
+      "latitude": 52.162,
+      "longitude": -7.152,
       "readings": [
         {
           "id": "01",
@@ -46,12 +48,28 @@
           "pressure": 1005
         },
         {
-          "id": "0b63a950-2b8c-11ed-9877-55a93ca3ff17",
-          "code": 600,
-          "temperature": 6,
-          "windSpeed": 2,
-          "windDirection": 200,
-          "pressure": 1004
+          "id": "62356da0-2b9a-11ed-83e6-cde38ed6dc2b",
+          "code": 500,
+          "temperature": 40,
+          "windSpeed": 40,
+          "windDirection": 65,
+          "pressure": 1100
+        },
+        {
+          "id": "0e7cb5e0-2b9c-11ed-b328-11356c10a80d",
+          "code": 200,
+          "temperature": 60,
+          "windSpeed": 55,
+          "windDirection": 50,
+          "pressure": 1200
+        },
+        {
+          "id": "5566eff0-2b9e-11ed-965b-c7f0a52fe2d7",
+          "code": 300,
+          "temperature": 80,
+          "windSpeed": 75,
+          "windDirection": 255,
+          "pressure": 1500
         }
       ]
     }

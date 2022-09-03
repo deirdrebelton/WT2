@@ -7,8 +7,14 @@
                 <div class="header item" style="background-color: black; color: white;">
                     {{playlist.title}} <i class="big icon map marker alternate grey"></i>
                 </div>
+              <div class="item" style="background-color: black; color: white;">
+                      Lat: {{playlist.latitude}}
+                    <div class="item" style="background-color: black; color: white;">
+                        Long: {{playlist.longitude}}
             </div>
         </div>
+               </div>
+           </div>
   <div class="column">
             <div class="ui vertical fluid menu" style="background-color: black; color: white;">
                 <div class="header item" style="background-color: black; color: white;">
@@ -29,9 +35,9 @@
                     <div class="item" style="background-color: black; color: white;">
                         {{lastReading.temperature}} degC
                         <div class="item" style="background-color: black; color: white;">
-                            Min 
+                            Min {{minTemp.temperature}} degC
                             <div class="item" style="background-color: black; color: white;">
-                                Max 
+                                Max {{maxTemp.temperature}} degC
                             </div>
                         </div>
                     </div>
@@ -44,15 +50,15 @@
                     Wind <i class="big icon wind green"></i>
                 </div>
                 <div class="item" style="background-color: black; color: white;">
-                     bft {{bft}}
+                     {{bft}} bft
                     <div class="item" style="background-color: black; color: white;">
-                        direction {{compassDirection}}
+                        Direction {{compassDirection}}
                         <div class="item" style="background-color: black; color: white;">
                             Feels like {{windChill}}
                             <div class="item" style="background-color: black; color: white;">
-                                Min
+                                Min {{minWindSpeed.windSpeed}} km/h
                                 <div class="item" style="background-color: black; color: white;">
-                                    Max 
+                                    Max {{maxWindSpeed.windSpeed}} km/h
                                 </div>
                             </div>
                         </div>
@@ -68,9 +74,9 @@
                 <div class="item" style="background-color: black; color: white;">
                     {{lastReading.pressure}} hPa
                     <div class="item" style="background-color: black; color: white;">
-                        Min  hPa
+                        Min {{minPressure.pressure}} hPa
                         <div class="item" style="background-color: black; color: white;">
-                            Max hPa
+                            Max {{maxPressure.pressure}} hPa
                         </div>
                     </div>
                 </div>
@@ -84,16 +90,6 @@
   <h2 class="ui header">
     {{playlist.title}}
   </h2>
-  <h4> Convert D to F : {{convertDegCtoF}}</h4>
-  <h4> Latest Code Reading: {{lastReading.code}}</h4>
-  <h4> Latest Code Meaning: {{weatherCondition}}</h4>
-  <h4> Latest Temperature Reading: {{lastReading.temperature}}</h4>
-  <h4> Latest pressure Reading: {{lastReading.pressure}}</h4>
-  <h4> compassDirection {{compassDirection}}</h4>
-  <h4> wind in Bft: {{bft}}</h4>
-  <h4> wind chill: {{windChill}}</h4>
-  <h4> min Temp: {{minTemp}}</h4>
-  
   
   {{> listsongs}}
   {{> addsong}}

@@ -17,9 +17,13 @@ const playlist = {
     const bft = playlistAnalytics.getWindBft(playlist);
     const compassDirection = playlistAnalytics.getCompassDirection(playlist);
     const windChill = playlistAnalytics.getWindChill(playlist);
-    const minTemp = playlistAnalytics.getMinTemp(playlist);
     const weatherCondition = playlistAnalytics.getWeatherCondition(playlist);
-    
+    const minTemp = playlistAnalytics.getMinTemp(playlist);
+    const maxTemp = playlistAnalytics.getMaxTemp(playlist); 
+    const minPressure = playlistAnalytics.getMinPressure(playlist);
+    const maxPressure = playlistAnalytics.getMaxPressure(playlist);
+    const minWindSpeed = playlistAnalytics.getMinWindSpeed(playlist);
+    const maxWindSpeed = playlistAnalytics.getMaxWindSpeed(playlist);
     
     console.log(lastReading);
     const viewData = {
@@ -30,8 +34,13 @@ const playlist = {
       bft: bft,
       compassDirection: compassDirection,
       windChill : windChill,
+      weatherCondition : weatherCondition,
       minTemp: minTemp,
-      weatherCondition : weatherCondition
+      maxTemp: maxTemp,
+      minPressure: minPressure,
+      maxPressure: maxPressure,
+      minWindSpeed: minWindSpeed,
+      maxWindSpeed: maxWindSpeed
     };
     response.render("playlist", viewData);
   },

@@ -134,14 +134,79 @@ const playlistAnalytics = {
     let minTemp = 0;
     if (playlist.readings.length > 0) {
       minTemp = playlist.readings[0];
-    for (let i = 1; i < playlist.readings.length; i++) {
+    for (let i = 0; i < playlist.readings.length; i++) {
       if (playlist.readings[i].temperature < minTemp.temperature) {
-        minTemp = playlist.readings[i];;
+        minTemp = playlist.readings[i];
       }
     }
     }
     return minTemp;
-  }
+  },
+  
+  getMaxTemp(playlist) {
+    let maxTemp = 0;
+    if (playlist.readings.length > 0) {
+      maxTemp = playlist.readings[0];
+    for (let i = 0; i < playlist.readings.length; i++) {
+      if (playlist.readings[i].temperature > maxTemp.temperature) {
+        maxTemp = playlist.readings[i];
+      }
+    }
+    }
+    return maxTemp;
+  },
+  
+  getMinPressure(playlist) {
+    let minPressure = 0;
+    if (playlist.readings.length > 0) {
+      minPressure = playlist.readings[0];
+    for (let i = 0; i < playlist.readings.length; i++) {
+      if (playlist.readings[i].pressure < minPressure.pressure) {
+        minPressure = playlist.readings[i];
+      }
+    }
+    }
+    return minPressure;
+  },
+  
+  getMaxPressure(playlist) {
+    let maxPressure = 0;
+    if (playlist.readings.length > 0) {
+      maxPressure = playlist.readings[0];
+    for (let i = 0; i < playlist.readings.length; i++) {
+      if (playlist.readings[i].pressure > maxPressure.pressure) {
+        maxPressure = playlist.readings[i];
+      }
+    }
+    }
+    return maxPressure;
+  },
+  
+  getMinWindSpeed(playlist) {
+    let minWindSpeed = 0;
+    if (playlist.readings.length > 0) {
+      minWindSpeed = playlist.readings[0];
+    for (let i = 0; i < playlist.readings.length; i++) {
+      if (playlist.readings[i].windSpeed < minWindSpeed.windSpeed) {
+        minWindSpeed = playlist.readings[i];
+      }
+    }
+    }
+    return minWindSpeed;
+  },
+  
+  getMaxWindSpeed(playlist) {
+    let maxWindSpeed = 0;
+    if (playlist.readings.length > 0) {
+      maxWindSpeed = playlist.readings[0];
+    for (let i = 0; i < playlist.readings.length; i++) {
+      if (playlist.readings[i].windSpeed > maxWindSpeed.windSpeed) {
+        maxWindSpeed = playlist.readings[i];
+      }
+    }
+    }
+    return maxWindSpeed;
+  },
   
   
 };
