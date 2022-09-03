@@ -7,19 +7,28 @@ const uuid = require("uuid");
 
 const playlist = {
   index(request, response) {
-    const playlistId = request.params.id;
+    const playlistId = request.params.id;  
     logger.debug("Playlist id = ", playlistId);
-       
-    let lastReading = null; 
+ 
+
     const playlist = playlistStore.getPlaylist(playlistId);
-    for (let i = 0; i < playlist.readings.length; i++) {
-          lastReading = playlist.readings[playlist.readings.length - 1];
-      }
+    const lastReading = playlistAnalytics.getLastReading(playlist);
+    const convertDegCtoF = playlistAnalytics.getConvertDegCtoF(playlist);
+    const bft = playlistAnalytics.getWindBft(playlist);
+    const compassDirection = playlistAnalytics.getCompassDirection(playlist);
+    const windChill = playlistAnalytics.getWindChill(playlist);
+    const minTemp = playlistAnalytics.getMinTemp(playlist);
+    
     console.log(lastReading);
     const viewData = {
       title: "Playlist",
       playlist: playlistStore.getPlaylist(playlistId),
-      lastReading: lastReading
+      lastReading: lastReading,
+      convertDegCtoF: convertDegCtoF,
+      bft: bft,
+      compassDirection: compassDirection,
+      windChill : windChill,
+      minTemp: minTemp
     };
     response.render("playlist", viewData);
   },

@@ -15,10 +15,6 @@
                     Weather <i class="big icon cloud sun orange"></i>
                 </div>
                 <div class="item" style="background-color: black; color: white;">
-                     
-                  {{playlist.readings.temperature}} 
-                  {{lastReading.temperature}}
-  
           
                 </div>
             </div>
@@ -29,9 +25,9 @@
                     Temperature <i class="big icon temperature low blue"></i>
                 </div>
                 <div class="item" style="background-color: black; color: white;">
-                      {{playlist.readings.temperature}} D degF
+                      {{playlist.readings.temperature}} degF
                     <div class="item" style="background-color: black; color: white;">
-                        {{playlist.readings.temperature}} degC
+                        {{lastReading.temperature}} degC
                         <div class="item" style="background-color: black; color: white;">
                             Min 
                             <div class="item" style="background-color: black; color: white;">
@@ -70,7 +66,7 @@
                     Pressure <i class="big icon sun outline brown"></i>
                 </div>
                 <div class="item" style="background-color: black; color: white;">
-                    {{playlist.readings.pressure}} hPa
+                    {{lastReading.pressure}} hPa
                     <div class="item" style="background-color: black; color: white;">
                         Min  hPa
                         <div class="item" style="background-color: black; color: white;">
@@ -88,10 +84,15 @@
   <h2 class="ui header">
     {{playlist.title}}
   </h2>
-  <h4> Shortest song: {{shortestSong.title}}</h4>
-  <h4> Latest Reading: {{lastReading.code}}</h4>
-  <h4> Latest Reading: {{lastReading.temperature}}</h4>
-  <h4> degCtoF: {{degCtoF}}</h4>
+  <h4> Convert D to F : {{convertDegCtoF}}</h4>
+  <h4> Latest Code Reading: {{lastReading.code}}</h4>
+  <h4> Latest Temperature Reading: {{lastReading.temperature}}</h4>
+  <h4> Latest pressure Reading: {{lastReading.pressure}}</h4>
+  <h4> compassDirection {{compassDirection}}</h4>
+  <h4> wind in Bft: {{bft}}</h4>
+  <h4> wind chill: {{windChill}}</h4>
+  <h4> min Temp: {{minTemp}}</h4>
+  
   {{> listsongs}}
   {{> addsong}}
 </section>
