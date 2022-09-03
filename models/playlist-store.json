@@ -3,45 +3,41 @@
     {
       "id": "8b301260-d267-11eb-a8f7-591ae1064ded",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "title": "Beethoven Sonatas",
-      "duration": 25,
-      "songs": [
+      "title": "Tramore",
+      "readings": [
         {
-          "id": "04",
-          "title": "Piano Sonata No. 3",
-          "artist": "Beethoven",
-          "genre": "Classical",
-          "duration": 5
+          "id": "01",
+          "code": 800,
+          "temperature": 0.5,
+          "windSpeed": 0.5,
+          "windDirection": 220,
+          "pressure": 1001
         },
         {
-          "id": "05",
-          "title": "Piano Sonata No. 7",
-          "artist": "Beethoven",
-          "genre": "Classical",
-          "duration": 6
+          "id": "02",
+          "code": 700,
+          "temperature": 8,
+          "windSpeed": 1,
+          "windDirection": 90,
+          "pressure": 1000
         },
         {
-          "id": "06",
-          "title": "Piano Sonata No. 10",
-          "artist": "Beethoven",
-          "genre": "Classical",
-          "duration": 4
+          "id": "03",
+          "code": 200,
+          "temperature": 0.5,
+          "windSpeed": 3.5,
+          "windDirection": 120,
+          "pressure": 999
+        },
+        {
+          "id": "6f4175e0-2b5c-11ed-9a06-83e34f4df138",
+          "code": 300,
+          "temperature": 3,
+          "windSpeed": 55,
+          "windDirection": 55,
+          "pressure": 1000
         }
       ]
-    },
-    {
-      "id": "d1f30630-1c80-11ed-913b-fb7c2472a96a",
-      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
-      "title": "g",
-      "songs": [
-        {
-          "id": "d6528fc0-1c80-11ed-913b-fb7c2472a96a",
-          "title": "b",
-          "artist": "b",
-          "duration": 10
-        }
-      ],
-      "duration": 10
     }
   ]
 }

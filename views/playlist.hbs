@@ -1,10 +1,97 @@
 {{> menu}}
 
+<div class="ui center aligned five column padded grid">
+    <div class="stretched row">
+        <div class="column">
+            <div class="ui vertical fluid menu" style="background-color: black; color: white;">
+                <div class="header item" style="background-color: black; color: white;">
+                    {{playlist.title}} <i class="big icon map marker alternate grey"></i>
+                </div>
+            </div>
+        </div>
+  <div class="column">
+            <div class="ui vertical fluid menu" style="background-color: black; color: white;">
+                <div class="header item" style="background-color: black; color: white;">
+                    Weather <i class="big icon cloud sun orange"></i>
+                </div>
+                <div class="item" style="background-color: black; color: white;">
+                     
+                  {{playlist.readings.temperature}} 
+                  {{lastReading.temperature}}
+  
+          
+                </div>
+            </div>
+        </div>
+  <div class="column">
+            <div class="ui vertical fluid menu" style="background-color: black; color: white;">
+                <div class="header item" style="background-color: black; color: white;">
+                    Temperature <i class="big icon temperature low blue"></i>
+                </div>
+                <div class="item" style="background-color: black; color: white;">
+                      {{playlist.readings.temperature}} D degF
+                    <div class="item" style="background-color: black; color: white;">
+                        {{playlist.readings.temperature}} degC
+                        <div class="item" style="background-color: black; color: white;">
+                            Min 
+                            <div class="item" style="background-color: black; color: white;">
+                                Max 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <div class="column">
+            <div class="ui vertical fluid menu" style="background-color: black; color: white;">
+                <div class="header item" style="background-color: black; color: white;">
+                    Wind <i class="big icon wind green"></i>
+                </div>
+                <div class="item" style="background-color: black; color: white;">
+                     bft
+                    <div class="item" style="background-color: black; color: white;">
+                        direction
+                        <div class="item" style="background-color: black; color: white;">
+                            Feels like
+                            <div class="item" style="background-color: black; color: white;">
+                                Min
+                                <div class="item" style="background-color: black; color: white;">
+                                    Max 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <div class="column">
+            <div class="ui vertical fluid menu" style="background-color: black; color: white;">
+                <div class="header item" style="background-color: black; color: white;">
+                    Pressure <i class="big icon sun outline brown"></i>
+                </div>
+                <div class="item" style="background-color: black; color: white;">
+                    {{playlist.readings.pressure}} hPa
+                    <div class="item" style="background-color: black; color: white;">
+                        Min  hPa
+                        <div class="item" style="background-color: black; color: white;">
+                            Max hPa
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  
 <section class="ui center aligned middle aligned segment">
   <h2 class="ui header">
     {{playlist.title}}
   </h2>
-  <h4> Total Duration: {{playlistSummary.duration}}; Shortest song: {{playlistSummary.shortestSong.title}}</h4>
+  <h4> Shortest song: {{shortestSong.title}}</h4>
+  <h4> Latest Reading: {{lastReading.code}}</h4>
+  <h4> Latest Reading: {{lastReading.temperature}}</h4>
+  <h4> degCtoF: {{degCtoF}}</h4>
   {{> listsongs}}
   {{> addsong}}
 </section>

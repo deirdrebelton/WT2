@@ -11,16 +11,22 @@
     </tr>
   </thead>
   <tbody>
-    {{#each playlist.songs}}
+    {{#each playlist.readings}}
       <tr>
         <td>
-          {{title}}
+          {{code}}
         </td>
         <td>
-          {{artist}}
+          {{temperature}}
         </td>
         <td>
-          {{duration}}
+          {{windSpeed}}
+        </td>
+        <td>
+          {{windDirection}}
+        </td>
+        <td>
+          {{pressure}}
         </td>
         <td>
           <a href="/song/{{../playlist.id}}/editsong/{{id}}" class="ui icon button">
