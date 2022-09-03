@@ -7,19 +7,21 @@
                 <div class="header item" style="background-color: black; color: white;">
                     {{playlist.title}} <i class="big icon map marker alternate grey"></i>
                 </div>
+              <div class="item" style="background-color: black; color: white;">
+                      Lat: {{playlist.latitude}}
+                    <div class="item" style="background-color: black; color: white;">
+                        Long: {{playlist.longitude}}
             </div>
         </div>
+               </div>
+           </div>
   <div class="column">
             <div class="ui vertical fluid menu" style="background-color: black; color: white;">
                 <div class="header item" style="background-color: black; color: white;">
                     Weather <i class="big icon cloud sun orange"></i>
                 </div>
                 <div class="item" style="background-color: black; color: white;">
-                     
-                  {{playlist.readings.temperature}} 
-                  {{lastReading.temperature}}
-  
-          
+                {{weatherCondition}}
                 </div>
             </div>
         </div>
@@ -29,13 +31,13 @@
                     Temperature <i class="big icon temperature low blue"></i>
                 </div>
                 <div class="item" style="background-color: black; color: white;">
-                      {{playlist.readings.temperature}} D degF
+                      {{convertDegCtoF}} degF
                     <div class="item" style="background-color: black; color: white;">
-                        {{playlist.readings.temperature}} degC
+                        {{lastReading.temperature}} degC
                         <div class="item" style="background-color: black; color: white;">
-                            Min 
+                            Min {{minTemp.temperature}} degC
                             <div class="item" style="background-color: black; color: white;">
-                                Max 
+                                Max {{maxTemp.temperature}} degC
                             </div>
                         </div>
                     </div>
@@ -48,15 +50,15 @@
                     Wind <i class="big icon wind green"></i>
                 </div>
                 <div class="item" style="background-color: black; color: white;">
-                     bft
+                     {{bft}} bft
                     <div class="item" style="background-color: black; color: white;">
-                        direction
+                        Direction {{compassDirection}}
                         <div class="item" style="background-color: black; color: white;">
-                            Feels like
+                            Feels like {{windChill}}
                             <div class="item" style="background-color: black; color: white;">
-                                Min
+                                Min {{minWindSpeed.windSpeed}} km/h
                                 <div class="item" style="background-color: black; color: white;">
-                                    Max 
+                                    Max {{maxWindSpeed.windSpeed}} km/h
                                 </div>
                             </div>
                         </div>
@@ -70,11 +72,11 @@
                     Pressure <i class="big icon sun outline brown"></i>
                 </div>
                 <div class="item" style="background-color: black; color: white;">
-                    {{playlist.readings.pressure}} hPa
+                    {{lastReading.pressure}} hPa
                     <div class="item" style="background-color: black; color: white;">
-                        Min  hPa
+                        Min {{minPressure.pressure}} hPa
                         <div class="item" style="background-color: black; color: white;">
-                            Max hPa
+                            Max {{maxPressure.pressure}} hPa
                         </div>
                     </div>
                 </div>
@@ -88,10 +90,7 @@
   <h2 class="ui header">
     {{playlist.title}}
   </h2>
-  <h4> Shortest song: {{shortestSong.title}}</h4>
-  <h4> Latest Reading: {{lastReading.code}}</h4>
-  <h4> Latest Reading: {{lastReading.temperature}}</h4>
-  <h4> degCtoF: {{degCtoF}}</h4>
+  
   {{> listsongs}}
   {{> addsong}}
 </section>
