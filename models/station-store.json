@@ -51,24 +51,42 @@
           "windSpeed": 24,
           "windDirection": 70,
           "pressure": 1005
+        }
+      ]
+    },
+    {
+      "id": "8b301260-d267-11eb-a8f7-591ae1064ede",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Dunmore",
+      "latitude": 55.182,
+      "longitude": -17.162,
+      "readings": [
+        {
+          "date": "Sat Sep 03 2022 17:19:27",
+          "id": "04",
+          "code": 700,
+          "temperature": 8.0,
+          "windSpeed": 1.0,
+          "windDirection": 250,
+          "pressure": 1005
         },
         {
-          "date": "Sat Sep 03 2022 17:20:24 GMT+0000 (Coordinated Universal Time)",
-          "id": "b27ae080-2bac-11ed-9e76-3d2d2f3a4e3f",
-          "code": 500,
-          "temperature": 50,
-          "windSpeed": 50,
-          "windDirection": 50,
-          "pressure": 50
-        },
-        {
-          "date": "Sat Sep 03 2022 17:23:43 GMT+0000 (Coordinated Universal Time)",
-          "id": "2902cf60-2bad-11ed-a139-2b67b888e08c",
+          "date": "Sat Sep 03 2022 17:19:27",
+          "id": "05",
           "code": 200,
-          "temperature": 20,
-          "windSpeed": 20,
-          "windDirection": 20,
-          "pressure": 2
+          "temperature": 0.5,
+          "windSpeed": 1,
+          "windDirection": 90,
+          "pressure": 999
+        },
+        {
+          "date": "Sat Sep 03 2022 17:19:27",
+          "id": "06",
+          "code": 700,
+          "temperature": 8,
+          "windSpeed": 10.5,
+          "windDirection": 125,
+          "pressure": 1002
         }
       ]
     },
