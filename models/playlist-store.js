@@ -37,36 +37,34 @@ const playlistStore = {
     this.store.save();
   },
 
-  addSong(id, song) {
+  addSong(id, reading) {
     const playlist = this.getPlaylist(id);
-    playlist.songs.push(song);
+    playlist.readings.push(reading);
 
-    let duration = 0;
-    for (let i = 0; i < playlist.songs.length; i++) {
-      duration += playlist.songs[i].duration;
-    }
-
-    playlist.duration = duration;
+    
     this.store.save();
   },
 
-  removeSong(id, songId) {
+  removeSong(id, readingId) {
     const playlist = this.getPlaylist(id);
-    const songs = playlist.songs;
-    _.remove(songs, { id: songId });
+    const readings = playlist.readings;
+    _.remove(readings, { id: readingId });
     this.store.save();
   },
 
-  getSong(id, songId) {
+  getSong(id, readingId) {
     const playList = this.store.findOneBy(this.collection, { id: id });
-    const songs = playList.songs.filter(song => song.id == songId);
-    return songs[0];
+    const readings = playList.readings.filter(reading => reading.id == readingId);
+    return readings[0];
   },
 
-  updateSong(song, updatedSong) {
-    song.title = updatedSong.title;
-    song.artist = updatedSong.artist;
-    song.duration = updatedSong.duration;
+  updateSong(reading, updatedReading) {
+    reading.id = updatedReading.id;
+    reading.code = updatedReading.code;
+    reading.temperature = updatedReading.temperature;
+    reading.windSpeed = updatedReading.windSpeed;
+    reading.windDirection = updatedReading.windDirection;
+    reading.pressure = updatedReading.pressure;
     this.store.save();
   }
 };

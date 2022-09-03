@@ -9,14 +9,17 @@ const playlist = {
   index(request, response) {
     const playlistId = request.params.id;
     logger.debug("Playlist id = ", playlistId);
+       
+    let lastReading = null; 
     const playlist = playlistStore.getPlaylist(playlistId);
+    for (let i = 0; i < playlist.readings.length; i++) {
+          lastReading = playlist.readings[playlist.readings.length - 1];
+      }
+    console.log(lastReading);
     const viewData = {
       title: "Playlist",
-      playlist: playlist,
-      playlistSummary : {
-        shortestSong : playlistAnalytics.getShortestSong(playlist),
-        duration : playlistAnalytics.getPlaylistDuration(playlist)
-      }
+      playlist: playlistStore.getPlaylist(playlistId),
+      lastReading: lastReading
     };
     response.render("playlist", viewData);
   },
@@ -34,9 +37,11 @@ const playlist = {
     const playlist = playlistStore.getPlaylist(playlistId);
     const newSong = {
       id: uuid.v1(),
-      title: request.body.title,
-      artist: request.body.artist,
-      duration: Number(request.body.duration)
+      code: Number(request.body.code),
+      temperature: Number(request.body.temperature),
+      windSpeed: Number(request.body.windSpeed),
+      windDirection: Number(request.body.windDirection),
+      pressure: Number(request.body.pressure)
     };
     logger.debug("New Song = ", newSong);
     playlistStore.addSong(playlistId, newSong);
