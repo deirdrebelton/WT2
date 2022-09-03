@@ -1,28 +1,28 @@
 "use strict";
 
-const playlistAnalytics = {
-  getLastReading(playlist) {
+const stationAnalytics = {
+  getLastReading(station) {
     let lastReading = null; 
-    for (let i = 0; i < playlist.readings.length; i++) {
-          lastReading = playlist.readings[playlist.readings.length - 1];
+    for (let i = 0; i < station.readings.length; i++) {
+          lastReading = station.readings[station.readings.length - 1];
       }
     return lastReading;
   },
 
-   getConvertDegCtoF(playlist) {
+   getConvertDegCtoF(station) {
     let convertDegCtoF = 0;
-    for (let i = 0; i < playlist.readings.length; i++) {
-      let reading = playlist.readings[i];
+    for (let i = 0; i < station.readings.length; i++) {
+      let reading = station.readings[i];
       convertDegCtoF = (reading.temperature * (9.0 / 5.0)) + 32.0;
     }
     return convertDegCtoF;
   },
   
-  getWindBft(playlist) {
+  getWindBft(station) {
     let bft = 0;
-    for (let i = 0; i < playlist.readings.length; i++) {
-    let reading = playlist.readings[i];
-    if (playlist.readings.windSpeed == 0) {
+    for (let i = 0; i < station.readings.length; i++) {
+    let reading = station.readings[i];
+    if (station.readings.windSpeed == 0) {
       bft = 0;
     } else if (reading.windSpeed >= 1 && reading.windSpeed <= 6) {
       bft = 1;
@@ -55,10 +55,10 @@ const playlistAnalytics = {
     return bft;
   },
   
-    getCompassDirection(playlist) {
+    getCompassDirection(station) {
     let compassDirection = null;
-    for (let i = 0; i < playlist.readings.length; i++) {
-      let reading = playlist.readings[i];
+    for (let i = 0; i < station.readings.length; i++) {
+      let reading = station.readings[i];
     if (reading.windDirection > 11.25 && reading.windDirection < 33.75) {
       compassDirection = "NNE";
     } else if (reading.windDirection > 33.75 && reading.windDirection < 56.25) {
@@ -96,19 +96,19 @@ const playlistAnalytics = {
     return compassDirection;
   },
   
-  getWindChill(playlist) {
+  getWindChill(station) {
     let windChill = 0;
-    for (let i = 0; i < playlist.readings.length; i++) {
-      let reading = playlist.readings[i];
+    for (let i = 0; i < station.readings.length; i++) {
+      let reading = station.readings[i];
       windChill = (13.12 + (0.6215 * reading.temperature) - (11.37 * (Math.pow(reading.windSpeed, 0.16))) + (0.3965 * reading.temperature * (Math.pow(reading.windSpeed, 0.16)))).toFixed(1);
     }
     return windChill;
   },
   
-   getWeatherCondition(playlist) {
+   getWeatherCondition(station) {
     let weatherCondition = null;
-    for (let i = 0; i < playlist.readings.length; i++) {
-    let reading = playlist.readings[i];
+    for (let i = 0; i < station.readings.length; i++) {
+    let reading = station.readings[i];
     if (reading.code === 100) {
       weatherCondition = "Clear";
     } else if (reading.code === 200) {
@@ -130,78 +130,78 @@ const playlistAnalytics = {
     return weatherCondition;
   },
   
-  getMinTemp(playlist) {
+  getMinTemp(station) {
     let minTemp = 0;
-    if (playlist.readings.length > 0) {
-      minTemp = playlist.readings[0];
-    for (let i = 0; i < playlist.readings.length; i++) {
-      if (playlist.readings[i].temperature < minTemp.temperature) {
-        minTemp = playlist.readings[i];
+    if (station.readings.length > 0) {
+      minTemp = station.readings[0];
+    for (let i = 0; i < station.readings.length; i++) {
+      if (station.readings[i].temperature < minTemp.temperature) {
+        minTemp = station.readings[i];
       }
     }
     }
     return minTemp;
   },
   
-  getMaxTemp(playlist) {
+  getMaxTemp(station) {
     let maxTemp = 0;
-    if (playlist.readings.length > 0) {
-      maxTemp = playlist.readings[0];
-    for (let i = 0; i < playlist.readings.length; i++) {
-      if (playlist.readings[i].temperature > maxTemp.temperature) {
-        maxTemp = playlist.readings[i];
+    if (station.readings.length > 0) {
+      maxTemp = station.readings[0];
+    for (let i = 0; i < station.readings.length; i++) {
+      if (station.readings[i].temperature > maxTemp.temperature) {
+        maxTemp = station.readings[i];
       }
     }
     }
     return maxTemp;
   },
   
-  getMinPressure(playlist) {
+  getMinPressure(station) {
     let minPressure = 0;
-    if (playlist.readings.length > 0) {
-      minPressure = playlist.readings[0];
-    for (let i = 0; i < playlist.readings.length; i++) {
-      if (playlist.readings[i].pressure < minPressure.pressure) {
-        minPressure = playlist.readings[i];
+    if (station.readings.length > 0) {
+      minPressure = station.readings[0];
+    for (let i = 0; i < station.readings.length; i++) {
+      if (station.readings[i].pressure < minPressure.pressure) {
+        minPressure = station.readings[i];
       }
     }
     }
     return minPressure;
   },
   
-  getMaxPressure(playlist) {
+  getMaxPressure(station) {
     let maxPressure = 0;
-    if (playlist.readings.length > 0) {
-      maxPressure = playlist.readings[0];
-    for (let i = 0; i < playlist.readings.length; i++) {
-      if (playlist.readings[i].pressure > maxPressure.pressure) {
-        maxPressure = playlist.readings[i];
+    if (station.readings.length > 0) {
+      maxPressure = station.readings[0];
+    for (let i = 0; i < station.readings.length; i++) {
+      if (station.readings[i].pressure > maxPressure.pressure) {
+        maxPressure = station.readings[i];
       }
     }
     }
     return maxPressure;
   },
   
-  getMinWindSpeed(playlist) {
+  getMinWindSpeed(station) {
     let minWindSpeed = 0;
-    if (playlist.readings.length > 0) {
-      minWindSpeed = playlist.readings[0];
-    for (let i = 0; i < playlist.readings.length; i++) {
-      if (playlist.readings[i].windSpeed < minWindSpeed.windSpeed) {
-        minWindSpeed = playlist.readings[i];
+    if (station.readings.length > 0) {
+      minWindSpeed = station.readings[0];
+    for (let i = 0; i < station.readings.length; i++) {
+      if (station.readings[i].windSpeed < minWindSpeed.windSpeed) {
+        minWindSpeed = station.readings[i];
       }
     }
     }
     return minWindSpeed;
   },
   
-  getMaxWindSpeed(playlist) {
+  getMaxWindSpeed(station) {
     let maxWindSpeed = 0;
-    if (playlist.readings.length > 0) {
-      maxWindSpeed = playlist.readings[0];
-    for (let i = 0; i < playlist.readings.length; i++) {
-      if (playlist.readings[i].windSpeed > maxWindSpeed.windSpeed) {
-        maxWindSpeed = playlist.readings[i];
+    if (station.readings.length > 0) {
+      maxWindSpeed = station.readings[0];
+    for (let i = 0; i < station.readings.length; i++) {
+      if (station.readings[i].windSpeed > maxWindSpeed.windSpeed) {
+        maxWindSpeed = station.readings[i];
       }
     }
     }
@@ -213,4 +213,4 @@ const playlistAnalytics = {
 
 
 
-module.exports = playlistAnalytics;
+module.exports = stationAnalytics;
