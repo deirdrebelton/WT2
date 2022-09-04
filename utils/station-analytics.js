@@ -209,36 +209,36 @@ const stationAnalytics = {
   },
     
   getPressureTrend(station) {
-    let pressureTrend = 0;
+    let pressureTrend = null;
    if (station.readings.length > 2) {
       if (station.readings[station.readings.length - 1].pressure > station.readings[station.readings.length - 2].pressure && station.readings[station.readings.length - 2].pressure > station.readings[station.readings.length - 3].pressure) {
-        pressureTrend = 1;
+        pressureTrend = true;
       } else if (station.readings[station.readings.length - 1].pressure < station.readings[station.readings.length - 2].pressure && station.readings[station.readings.length - 2].pressure < station.readings[station.readings.length - 3].pressure) {
-        pressureTrend = -1;
+        pressureTrend = false;
       } 
   }
     return pressureTrend;
   },
   
   getTemperatureTrend(station) {
-    let temperatureTrend = 0;
+    let temperatureTrend = null;
    if (station.readings.length > 2) {
       if (station.readings[station.readings.length - 1].temperature > station.readings[station.readings.length - 2].temperature && station.readings[station.readings.length - 2].temperature > station.readings[station.readings.length - 3].temperature) {
-        temperatureTrend = 1;
+        temperatureTrend = true;
       } else if (station.readings[station.readings.length - 1].temperature < station.readings[station.readings.length - 2].temperature && station.readings[station.readings.length - 2].temperature < station.readings[station.readings.length - 3].temperature) {
-        temperatureTrend = -1;
+        temperatureTrend = false;
       } 
   }
     return temperatureTrend;
   },
   
  getWindTrend(station) {
-    let windTrend = 0;
+    let windTrend = null;
    if (station.readings.length > 2) {
       if (station.readings[station.readings.length - 1].windSpeed > station.readings[station.readings.length - 2].windSpeed && station.readings[station.readings.length - 2].windSpeed > station.readings[station.readings.length - 3].windSpeed) {
-        windTrend = 1;
+        windTrend = true;
       } else if (station.readings[station.readings.length - 1].windSpeed < station.readings[station.readings.length - 2].windSpeed && station.readings[station.readings.length - 2].windSpeed < station.readings[station.readings.length - 3].windSpeed) {
-        windTrend = -1;
+        windTrend = false;
       } 
   }
     return windTrend;

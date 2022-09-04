@@ -1,0 +1,148 @@
+<div class="ui center aligned five column padded grid">
+  <div class="stretched row">
+    <div class="column">
+      <div
+        class="ui vertical fluid menu"
+        style="background-color: black; color: white;">
+        <div class="header item" style="background-color: black; color: white;">
+          {{station.title}}
+          <i class="big icon map marker alternate grey"></i>
+        </div>
+        <div class="item" style="background-color: black; color: white;">
+          Lat:
+          {{station.latitude}}
+          <div class="item" style="background-color: black; color: white;">
+            Long:
+            {{station.longitude}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div
+        class="ui vertical fluid menu"
+        style="background-color: black; color: white;">
+        <div class="header item" style="background-color: black; color: white;">
+          Weather
+          <i class="big icon cloud sun orange"></i>
+        </div>
+        <div class="item" style="background-color: black; color: white;">
+          {{weatherCondition}}
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div
+        class="ui vertical fluid menu"
+        style="background-color: black; color: white;">
+        <div class="header item" style="background-color: black; color: white;">
+          Temperature
+          <i class="big icon temperature low blue"></i>
+        </div>
+        <div class="item" style="background-color: black; color: white;">
+          {{convertDegCtoF}}
+          degF
+          <div class="item" style="background-color: black; color: white;">
+            {{lastReading.temperature}}
+            degC
+            <div class="item" style="background-color: black; color: white;">
+              Min
+              {{minTemp.temperature}}
+              degC
+              <div class="item" style="background-color: black; color: white;">
+                Max
+                {{maxTemp.temperature}}
+                degC
+                <div
+                  class="item"
+                  style="background-color: black; color: white;">
+                  Temperature is
+                  {{temperatureTrend}}
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div
+        class="ui vertical fluid menu"
+        style="background-color: black; color: white;">
+        <div class="header item" style="background-color: black; color: white;">
+          Wind
+          <i class="big icon wind green"></i>
+        </div>
+        <div class="item" style="background-color: black; color: white;">
+          {{bft}}
+          bft
+          <div class="item" style="background-color: black; color: white;">
+            Direction
+            {{compassDirection}}
+            <div class="item" style="background-color: black; color: white;">
+              Feels like
+              {{windChill}}
+              <div class="item" style="background-color: black; color: white;">
+                Min
+                {{minWindSpeed.windSpeed}}
+                km/h
+                <div
+                  class="item"
+                  style="background-color: black; color: white;">
+                  Max
+                  {{maxWindSpeed.windSpeed}}
+                  km/h
+                  <div
+                    class="item"
+                    style="background-color: black; color: white;">
+                    Wind Speed is
+                    {{windTrend}}
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div
+        class="ui vertical fluid menu"
+        style="background-color: black; color: white;">
+        <div class="header item" style="background-color: black; color: white;">
+          Pressure
+          <i class="big icon sun outline brown"></i>
+        </div>
+        <div class="item" style="background-color: black; color: white;">
+          {{lastReading.pressure}}
+          hPa
+          <div class="item" style="background-color: black; color: white;">
+            Min
+            {{minPressure.pressure}}
+            hPa
+            <div class="item" style="background-color: black; color: white;">
+              Max
+              {{maxPressure.pressure}}
+              hPa
+              <div class="item" style="background-color: black; color: white;">
+                Pressure is
+                {{pressureTrend}}
+                <div class="entry">
+                  {{#if pressureTrend}}
+                    <i class="right floated big arrow up red icon"></i>
+                  {{else if pressureTrend}}
+                    <i class="right floated big arrow down blue icon"></i>
+                  {{else}}
+                    no trend
+                  {{/if}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,7 +9,6 @@ const station = {
   index(request, response) {
     const stationId = request.params.id;  
     logger.debug("Station id = ", stationId);
- 
 
     const station = stationStore.getStation(stationId);
     const lastReading = stationAnalytics.getLastReading(station);
@@ -51,6 +50,7 @@ const station = {
       date:date
     };
     response.render("station", viewData);
+    
   },
 
   deleteReading(request, response) {

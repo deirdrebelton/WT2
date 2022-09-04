@@ -42,15 +42,6 @@
           "windSpeed": 35,
           "windDirection": 55,
           "pressure": 1000
-        },
-        {
-          "date": "Sat Sep 03 2022 17:19:27",
-          "id": "b9945260-2b8a-11ed-b045-6576694bfe9c",
-          "code": 800,
-          "temperature": 25,
-          "windSpeed": 40,
-          "windDirection": 70,
-          "pressure": 998
         }
       ]
     },
