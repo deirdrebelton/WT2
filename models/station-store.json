@@ -1,0 +1,100 @@
+{
+  "stationCollection": [
+    {
+      "id": "8b301260-d267-11eb-a8f7-591ae1064ded",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Tramore",
+      "latitude": 52.162,
+      "longitude": -7.152,
+      "readings": [
+        {
+          "date": "Sat Sep 03 2022 17:19:27",
+          "id": "01",
+          "code": 800,
+          "temperature": 0.5,
+          "windSpeed": 0.5,
+          "windDirection": 220,
+          "pressure": 1008
+        },
+        {
+          "date": "Sat Sep 03 2022 17:19:27",
+          "id": "02",
+          "code": 700,
+          "temperature": 8,
+          "windSpeed": 1.5,
+          "windDirection": 90,
+          "pressure": 1005
+        },
+        {
+          "date": "Sat Sep 03 2022 17:19:27",
+          "id": "03",
+          "code": 200,
+          "temperature": 6.5,
+          "windSpeed": 3.5,
+          "windDirection": 120,
+          "pressure": 1002
+        },
+        {
+          "date": "Sat Sep 03 2022 17:19:27",
+          "id": "6f4175e0-2b5c-11ed-9a06-83e34f4df138",
+          "code": 300,
+          "temperature": 3,
+          "windSpeed": 35,
+          "windDirection": 55,
+          "pressure": 1000
+        }
+      ]
+    },
+    {
+      "id": "8b301260-d267-11eb-a8f7-591ae1064ede",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Dunmore",
+      "latitude": 55.182,
+      "longitude": -17.162,
+      "readings": [
+        {
+          "date": "Sat Sep 03 2022 17:19:27",
+          "id": "04",
+          "code": 700,
+          "temperature": 8,
+          "windSpeed": 1,
+          "windDirection": 250,
+          "pressure": 999
+        },
+        {
+          "date": "Sat Sep 03 2022 17:19:27",
+          "id": "05",
+          "code": 200,
+          "temperature": 0.5,
+          "windSpeed": 6,
+          "windDirection": 90,
+          "pressure": 1002
+        },
+        {
+          "date": "Sat Sep 03 2022 17:19:27",
+          "id": "06",
+          "code": 700,
+          "temperature": 8,
+          "windSpeed": 10.5,
+          "windDirection": 125,
+          "pressure": 1005
+        },
+        {
+          "date": "Sat Sep 03 2022 20:54:24 GMT+0000 (Coordinated Universal Time)",
+          "id": "97a78600-2bca-11ed-a90f-b1f209d7ce31",
+          "code": 200,
+          "temperature": 10,
+          "windSpeed": 12,
+          "windDirection": 100,
+          "pressure": 1008
+        }
+      ]
+    },
+    {
+      "id": "49e60940-2b94-11ed-8117-79024c6d813d",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "f",
+      "readings": []
+    }
+  ]
+}
