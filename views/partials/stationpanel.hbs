@@ -58,7 +58,6 @@
                   style="background-color: black; color: white;">
                   Temperature is
                   {{temperatureTrend}}
-
                 </div>
               </div>
             </div>
@@ -71,34 +70,22 @@
         class="ui vertical fluid menu"
         style="background-color: black; color: white;">
         <div class="header item" style="background-color: black; color: white;">
-          Wind
-          <i class="big icon wind green"></i>
+          Wind <i class="big icon wind green"></i>
         </div>
         <div class="item" style="background-color: black; color: white;">
-          {{bft}}
-          bft
+          {{bft}} bft
           <div class="item" style="background-color: black; color: white;">
-            Direction
-            {{compassDirection}}
+            Direction {{compassDirection}}
             <div class="item" style="background-color: black; color: white;">
-              Feels like
-              {{windChill}}
+              Feels like {{windChill}}
               <div class="item" style="background-color: black; color: white;">
-                Min
-                {{minWindSpeed.windSpeed}}
-                km/h
-                <div
-                  class="item"
+                Min{{minWindSpeed.windSpeed}} km/h
+                <div class="item"
                   style="background-color: black; color: white;">
-                  Max
-                  {{maxWindSpeed.windSpeed}}
-                  km/h
-                  <div
-                    class="item"
+                  Max {{maxWindSpeed.windSpeed}} km/h
+                  <div class="item"
                     style="background-color: black; color: white;">
-                    Wind Speed is
-                    {{windTrend}}
-
+                    Wind Speed is {{windTrend}}
                   </div>
                 </div>
               </div>
@@ -112,8 +99,7 @@
         class="ui vertical fluid menu"
         style="background-color: black; color: white;">
         <div class="header item" style="background-color: black; color: white;">
-          Pressure
-          <i class="big icon sun outline brown"></i>
+          Pressure <i class="big icon sun outline brown"></i>
         </div>
         <div class="item" style="background-color: black; color: white;">
           {{lastReading.pressure}}
@@ -129,14 +115,6 @@
               <div class="item" style="background-color: black; color: white;">
                 Pressure is
                 {{pressureTrend}}
-                <div class="entry">
-                  {{#if pressureTrend}}
-                    <i class="right floated big arrow up red icon"></i>
-                  {{else if pressureTrend}}
-                    <i class="right floated big arrow down blue icon"></i>
-                  {{else}}
-                    no trend
-                  {{/if}}
                 </div>
               </div>
             </div>
@@ -145,4 +123,3 @@
       </div>
     </div>
   </div>
-</div>

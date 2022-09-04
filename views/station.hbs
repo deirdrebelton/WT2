@@ -9,4 +9,29 @@
 
   {{> listreadings}}
   {{> addreading}}
-</section>
+  </section>
+
+<div class="ui segment" id="chart"></div>
+<script>
+  data = {
+    labels: ["1st Reading", "2nd Reading", "3rd Reading", "4th Reading", "5th Reading", "6th Reading", "7th Reading", "8th Reading"],
+    datasets: [
+      { values: [
+          {{#each station.readings}}
+            {{temperature}},
+          {{/each}}
+        ] }
+    ]
+  };
+  new frappe.Chart("#chart", {
+    title: "Temperature Trend",
+    data: data,
+    type: "line",
+    height: 150,
+    colors: ["red"]
+  });
+</script>
+
+
+
+
